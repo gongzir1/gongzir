@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0，maximum-scale=1.0,minimun-scale=1.0,user-scalable=no">
+<style>	
+	
+	div#container {
+  position: relative;
+  left: 30px;
+		width: auto;
+}
+	ul {
+    list-style-type: none;
+}
+ 
+	li {
+    float: left;
+}
+ 
+	li a {
+    padding: 30px;
+	padding-left: 0px;
+    text-decoration:none; 
+	color:hsla(195,93%,70%,1.00);
+}
+	
+	#container{ position: relative;
+		box-sizing: content-box;
+	}
+	.hovertext{
+		align-content: center;
+		text-align: center;
+	}
+	
+	
+.backgrd {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .4s ease;
+  backface-visibility: hidden;
+}
+
+.hovertext {
+  transition: .4s ease;
+  opacity: 0;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+	width: 100%;
+}
+
+	.backgrd{
+		position: relative;
+	}
+	.backgrd:hover .hovertext{
+  opacity: 1;
+}
+
+.text {
+  background-color:dimgrey;
+	opacity: 0.7;
+  color: white;
+  font-size: 16px;
+	padding: 4px;
+}	
+	
+	.info{
+	text-align: center;
+	margin-top: 70px;
+	}
+	img.info{border-radius: 60px;}
+	.right{
+		float: right;
+		padding-right: 20%;
+		position: relative;
+	}
+	.left{
+		float: left;
+		padding-left: 20%;
+		position: relative;
+	}
+	.myjob{
+		border-radius: 20px;
+	}
+	.job{
+		font-size: 4px;
+	}
+</style>
+<title>PersonalWeb</title>
+</head>
+
+<body>
+	<div id="container">
+	 <div><nav>
+		 <ul>
+   <li><a href="#">About</a></li>
+   <li><a href="#">Work</a></li>
+   <li><a href="#">Contact</a></li>
+ </ul> </nav></div>
+		<br>
+	<div class="backgrd"><img src="images/IMG_6738.png" width="100%" height="200" class="backgrdimg">
+	<div class="hovertext">
+		<div class="text">Hey,I am ZIRUI GONG</div>
+		</div>
+</div>
+		<div class="info">
+			<img src="images/IMG_6165.JPG" alt="myphoto" width="130" class="info">
+			<p>I am a student from China who studies IT in Deakin<hr align="center" width="230"> Here's what I have done so far</p>
+		<div class="job">
+		<table align="center">
+			<tr><td><img src="images/movie.jpg" width="230px" class="myjob"></td><td><p>This is a website which presents the movies that on show </p></td></tr>
+			<tr><td><img src="images/账户名注册.jpg" width="230px" class="myjob"></td><td><p>This is a simple project about the log in interface</p></td></tr>
+		</table>
+		   </div>
+		<hr align="center" width="230">
+		<p>My photos</p>
+		<div class="img">
+			<table align="center"><tr>
+			<td width="200px"><img src="images/IMG_6162(20210713-105431).JPG" width="100%" height="150"></td>
+			<td width="200px"><img src="images/IMG_6156(20210713-105252).JPG" width="100%" height="150"></td>
+			<td width="200px"><img src="images/IMG_6735(20210724-135213).JPG" width="100%" height="150"></td>
+			<td width="200px"><img src="images/IMG_6157(20210713-105255).JPG" width="100%" height="150"></td></tr></table>
+			<table align="center" width="50%">
+			<tr><td><table class="left">
+				<tr>
+					<td width="100px"><img src="images/IMG_6160(20210713-105402).JPG" height="150" width="100%"></td>
+					<td width="100px"><img src="images/IMG_6161(20210713-105409).JPG" height="150" width="100%" ></td></tr>
+				<tr>
+					<td width="100px"><img src="images/IMG_6158(20210713-105308).JPG" height="150" width="100%" ></td>
+					<td width="100px"><img src="images/IMG_6159(20210713-105330).JPG" height="150" width="100%" ></td>
+				</tr>
+			</table></td>
+			<td><table class="right"><tr><td  width="200px"><img src="images/IMG_6737.JPG" height="150"  width="100%" ></td></tr>
+				<tr><td width="200px"><img src="images/IMG_6736.JPG" height="150" width="100%"></td></tr>
+				</table></td>
+				</tr></table>
+		</div>
+	</div>
+	</div>
+</body>
+</html>
