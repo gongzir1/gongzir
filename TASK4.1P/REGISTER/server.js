@@ -3,9 +3,9 @@ const app = express()
 
 app.use(express.static(__dirname+'/'))
 //引入模型对象，进行CRUD
-const userModel=require('./mongdb/model/user')
+const userModel=require('./mongodb/model/user')
 //引入数据库模块
-const db=require('./mongdb/model/db')
+const db=require('./mongodb/model/db')
 //使用内置中间件用于解析post请求的urlencoded参数
 app.use(express.urlencoded({extended:true}))
 
