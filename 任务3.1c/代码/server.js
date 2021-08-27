@@ -1,11 +1,13 @@
 const express = require("express")
 const app = express()
+const https=require("https")
 
 app.use(express.static(__dirname+'/'))
 //引入模型对象，进行CRUD
 const userModel=require('./mongodb/model/user')
 //引入数据库模块
 const db=require('./mongodb/model/db')
+const { json, response } = require("express")
 //使用内置中间件用于解析post请求的urlencoded参数
 app.use(express.urlencoded({extended:true}))
 
@@ -19,6 +21,32 @@ db(()=>{
       //  res.send("okkk")
       console.log(req.body)
         const{country,firstname,lastname,email,password,re_password,address,city,state,zip,phone}=req.body
+        const data={
+            members:[{
+                email_address:email,
+                status:"subscribed",
+                merge_fields:{
+                    FNAME:firstname,
+                    LNAME:lastname
+                }
+            }]
+        }
+        jsonData=JSON.stringify(data)
+        // const apiKey="6838db82fdee020273afb2813258257b-us5"
+        // const list_id="5e9b7302c6"
+        const url="https://us5.api.mailchimp.com/3.0/lists/5e9b7302c6"
+        const options={
+            method:"POST",
+            auth:"azi:6838db82fdee020273afb2813258257b-us5"
+        }
+       const request= https.request(url,options,(response)=>{
+            response.on("data",(data)=>{
+                console.log(JSON.parse(data))
+            })
+        })
+        request.write(jsonData)
+        request.end()
+        console.log(firstname,lastname,email)
         //校验数据合法性：
         const passwordReg=/^[a-zA-Z0-9_@]{8,20}$/
         if(country==''){
@@ -51,21 +79,33 @@ db(()=>{
                             res.send('successfully!')
 
 
-var send = require('./email.js');
-var sendmail='<div> <a href="https://mailchi.mp/102ae4f6309b/welcome?e=[UNIQID]">You have registered iServer successfully! click to know more!</a><div>'
-// 创建一个邮件对象
-var mail = {
-    // 发件人
-    from: 'g13546576777@163.com>',
-    // 主题
-    subject: 'Welcome to iServer',
-    // 收件人
-    to: email,
-    // 邮件内容，HTML格式
-    html:sendmail
+var send = require('./mail.js');
+// var sendmail='<div> <a href="https://mailchi.mp/102ae4f6309b/welcome?e=[UNIQID]">You have registered iServer successfully! click to know more!</a><div>'
+// // 创建一个邮件对象
+// var mail = {
+//     // 发件人
+//     from: 'g13546576777@163.com',
+//     // 主题
+//     subject: 'Welcome to iServer',
+//     // 收件人
+//     to: email,
+//     // 邮件内容，HTML格式
+//     html:sendmail
     
-};
-send(mail);
+// };
+// send(mail);
+// const message = {
+//     from_email: "g13546576777@163.com",
+//     subject: "welcome!",
+//     text: "Now you can have access to iServer",
+//     to: [
+//       {
+//         email: email,
+//         type: "to"
+//       }
+//     ]
+//   };
+//   send(message)
 
                         }
                             else{
