@@ -12,12 +12,11 @@ const db=require('./mongodb/model/db')
 const { json, response } = require("express")
 //使用内置中间件用于解析post请求的urlencoded参数
 app.use(express.urlencoded({extended:true}))
-
 db(()=>{
-    app.get('/register',(req,res)=>{
+    app.get('/',(req,res)=>{
         res.sendFile(__dirname+"/public/register.html")
        })
-    app.post('/register',async (req,res)=>{
+    app.post('/',async (req,res)=>{
         //获取用户输入
         // console.log("it is ok")
       //  res.send("okkk")
@@ -129,11 +128,11 @@ var send = require('./mail.js');
         //  校验失败：提示用户
     
     })
-    app.get('/login',(req,res)=>{
+    app.get('/',(req,res)=>{
         res.sendFile(__dirname+"/public/login.html")
        })
     //登录请求
-    app.post('/login',async(req,res)=>{
+    app.post('/',async(req,res)=>{
         //正则
         const passwordReg=/^[a-zA-Z0-9_@]{8,20}$/
         //校验数据
@@ -187,11 +186,16 @@ var send = require('./mail.js');
          
 
     )
-    app.listen(3000,function(request,response){
-      console.log("Server is running on port 3000")
-    })
+
+    let port = process.env.PORT
+    if (port == null || port == "") {
+      port = 3000;
+    }
+    app.listen(port);
 },
     (err)=>{
         console.log(err)
     })
 
+
+    
