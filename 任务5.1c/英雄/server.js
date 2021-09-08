@@ -13,10 +13,10 @@ const { json, response } = require("express")
 //使用内置中间件用于解析post请求的urlencoded参数
 app.use(express.urlencoded({extended:true}))
 db(()=>{
-    app.get('/',(req,res)=>{
+    app.get('/register',(req,res)=>{
         res.sendFile(__dirname+"/public/register.html")
        })
-    app.post('/',async (req,res)=>{
+    app.post('/register',async (req,res)=>{
         //获取用户输入
         // console.log("it is ok")
       //  res.send("okkk")
@@ -80,8 +80,8 @@ db(()=>{
                 }else{
                     userModel.create({country,firstname,lastname,email,hashedPassword,address,city,state,zip,phone},function(err,data){
                         if(!err){
-                            //  res.send('successfully!')
-                            res.redirect('/login')
+                             res.send('successfully!')
+                             // res.redirect('/login')
 
 
 var send = require('./mail.js');
@@ -128,11 +128,11 @@ var send = require('./mail.js');
         //  校验失败：提示用户
     
     })
-    app.get('/',(req,res)=>{
+    app.get('/login',(req,res)=>{
         res.sendFile(__dirname+"/public/login.html")
        })
     //登录请求
-    app.post('/',async(req,res)=>{
+    app.post('/login',async(req,res)=>{
         //正则
         const passwordReg=/^[a-zA-Z0-9_@]{8,20}$/
         //校验数据
@@ -196,6 +196,13 @@ var send = require('./mail.js');
     (err)=>{
         console.log(err)
     })
-
-
-    
+    if (process.env.NODE_ENV === 'production') {
+        // Exprees will serve up production assets
+        app.use(express.static(__dirname + '/public'));
+      
+        // Express serve up index.html file if it doesn't recognize route
+        const path = require('path');
+        app.get('*', (req, res) => {
+          res.sendFile(path.resolve(__dirname,'public','register.html'));
+        });
+      }
