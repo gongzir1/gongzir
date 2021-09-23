@@ -1,0 +1,12 @@
+.header-div{
+    background-color:gray;
+    padding: 0.7cm;
+    text-align: center;
+    height: 0.5px;
+    font-size: 0.2px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    padding-left: 100px;
+}
