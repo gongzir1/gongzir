@@ -1,0 +1,11 @@
+.footer-div{
+    background-color:gray;
+    padding: 0.7cm; 
+     padding-left: 50px;
+    text-align: left;
+    height: 23px;
+    /*font-size: 0.2px;*/
+    display: flex; 
+}
+
+
