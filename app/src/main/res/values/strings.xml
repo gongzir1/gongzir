@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SIT305 Quiz App</string>
+    <string name="title_activity_question1">Question1</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+
+</resources>
