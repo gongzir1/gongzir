@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_news_default_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".News">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/newsArticle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/newsArticleP1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:onClick="selectFragment"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/news" />
+
+                <ImageButton
+                    android:id="@+id/newsArticleP2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:onClick="selectFragment"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/news2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="168dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/newsArticleT1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BBC" />
+
+                <Space
+                    android:layout_width="94dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/newsArticleT2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="China" />
+
+                <Space
+                    android:layout_width="168dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="57dp"
+                    android:layout_height="16dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/newsArticleB1"
+                    android:layout_width="118dp"
+                    android:layout_height="78dp"
+                    android:text="Housing in Australia is broken’" />
+
+                <Space
+                    android:layout_width="44dp"
+                    android:layout_height="18dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/newsArticleB2"
+                    android:layout_width="157dp"
+                    android:layout_height="78dp"
+                    android:text="Why lab-grown diamond sales are surging" />
+
+                <Space
+                    android:layout_width="29dp"
+                    android:layout_height="21dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="83dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/newsArticleP3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:onClick="selectFragment"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/news3" />
+
+                <ImageButton
+                    android:id="@+id/newsArticleP4"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:onClick="selectFragment"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/news4" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="168dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/newsArticleT4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="UK"
+                    tools:layout_conversion_absoluteHeight="19dp"
+                    tools:layout_conversion_absoluteWidth="27dp"
+                    tools:layout_editor_absoluteX="165dp"
+                    tools:layout_editor_absoluteY="269dp" />
+
+                <Space
+                    android:layout_width="94dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/newsArticleT3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Life"
+                    tools:layout_conversion_absoluteHeight="19dp"
+                    tools:layout_conversion_absoluteWidth="54dp"
+                    tools:layout_editor_absoluteX="192dp"
+                    tools:layout_editor_absoluteY="269dp" />
+
+                <Space
+                    android:layout_width="168dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="168dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/newsArticleB4"
+                    android:layout_width="129dp"
+                    android:layout_height="60dp"
+                    android:text="BMW reveals its new $120,000 electric flagship" />
+
+                <Space
+                    android:layout_width="94dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/newsArticleB3"
+                    android:layout_width="125dp"
+                    android:layout_height="61dp"
+                    android:text="Why lab-grown diamond sales are surging" />
+
+                <Space
+                    android:layout_width="168dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
