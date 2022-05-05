@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".add_new_delivery_order">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Good type："
+            android:textSize="20sp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="Furniture"
+            android:id="@+id/C1"
+            ></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="Dry goods"
+            android:id="@+id/C2"
+            ></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="Food"
+            android:id="@+id/C3"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="Building material"
+            android:id="@+id/C4"></TextView>
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:hint="Other"
+            android:id="@+id/E1"
+
+            ></EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="261dp"
+            android:layout_height="42dp"
+            android:text="Weight and dimension："
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/AddWeight"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:hint="Weight"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/AddWidth"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:hint="Width"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/AddLength"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:hint="Length"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/AddHeight"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:hint="Height"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="325dp">
+
+        <TextView
+            android:layout_width="136dp"
+            android:layout_height="wrap_content"
+            android:text="Vehicle type："
+            android:textSize="20sp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:id="@+id/C5"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="Truck"></TextView>
+
+        <TextView
+            android:id="@+id/C6"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="Van"></TextView>
+
+        <TextView
+            android:id="@+id/C7"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="Refrigerated truck"></TextView>
+
+        <TextView
+            android:id="@+id/C8"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="Mini-truck"></TextView>
+
+        <EditText
+            android:id="@+id/E2"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:focusableInTouchMode="false"
+            android:hint="Other"></EditText>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="60dp"
+        android:text="Create order"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear"
+        android:id="@+id/createOrderBtn"></Button>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
