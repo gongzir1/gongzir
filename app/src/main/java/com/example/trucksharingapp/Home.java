@@ -23,9 +23,9 @@ public class Home extends AppCompatActivity implements OrderAdapter.OnRowClickLi
     List<Order> orderList=new ArrayList<>();
     ImageButton dropDownMenu;
     Button add_order;
-    private static Integer[]newImageList={R.drawable.new1,R.drawable.new2,R.drawable.new3,R.drawable.new4,R.drawable.new5,R.drawable.new6};
-    private static String[]newNameList={"aaaaaaaaaa","bbbbbbbbb","ccccccccc","dddddddddd","eeeeeeeee","fffffffffff"};
-    private static String[]newDetailList={"111111111111111111111111111111111111111111111111111111111111111111111","2222222222222222222222222222222222222222222222222222222222222222222","3333333333333333333333333333333333333333333333333333333333333333333333333333333","444444444444444444444444444444444444444444444444444444444","55555555555555555555555555555555555555555555555","6666666666666666666666666666666666666666666"};
+    private static Integer[]newImageList={R.drawable.image,R.drawable.image,R.drawable.image,R.drawable.image,R.drawable.image,R.drawable.image};
+    private static String[]newNameList={"order1","order2","order3","order4","order5","order6"};
+    private static String[]newDetailList={"this is order1","this is order2","this is order3","this is order4","this is order5","this is order6"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,6 +78,7 @@ public class Home extends AppCompatActivity implements OrderAdapter.OnRowClickLi
 
     @Override
     public void onItemClick(int id) {
-
+        Intent intentdetail=new Intent(getApplicationContext(),Order_details.class);
+        startActivity(intentdetail);
     }
 }

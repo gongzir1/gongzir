@@ -29,7 +29,7 @@ public class My_orders extends AppCompatActivity implements OrderAdapter.OnRowCl
     ImageButton dropDownMenu;
     Button add_order;
     DatabaseHelper db;
-    private static Integer[]newImageList={R.drawable.ic_launcher_foreground,R.drawable.new3,R.drawable.new4,R.drawable.new5,R.drawable.new6};
+    private static Integer[]newImageList={R.drawable.ic_launcher_foreground,R.drawable.image,R.drawable.image,R.drawable.image,R.drawable.image};
 
 
     @Override
@@ -46,7 +46,7 @@ public class My_orders extends AppCompatActivity implements OrderAdapter.OnRowCl
             Log.d("title", title);
             orderList.get(i).setTitle(title);
             orderList.get(i).setDetail(detail);
-            orderList.get(i).setImage(R.drawable.new2);
+            orderList.get(i).setImage(R.drawable.image);
         }
         rv_Order=findViewById(R.id.rv_order);
         orderAdapter=new OrderAdapter(orderList,My_orders.this,this);

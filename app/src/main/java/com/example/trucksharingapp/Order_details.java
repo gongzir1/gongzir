@@ -29,7 +29,7 @@ public class Order_details extends AppCompatActivity {
         String height="Height:"+intent.getStringExtra("height");
 
         imageView=findViewById(R.id.imageView);
-        imageView.setImageResource(R.drawable.new2);
+        imageView.setImageResource(R.drawable.image);
         usertv=findViewById(R.id.Textviewa);
         timetv=findViewById(R.id.Textviewc);
         weighttv=findViewById(R.id.Textviewe);

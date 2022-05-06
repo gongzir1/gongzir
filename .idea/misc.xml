@@ -16,12 +16,14 @@
         <entry key="..\:/Users/quoch/AndroidStudioProjects/TruckSharingApp/app/src/main/res/layout/menu.xml" value="0.1" />
         <entry key="..\:/Users/quoch/AndroidStudioProjects/TruckSharingApp/app/src/main/res/layout/order.xml" value="0.22685185185185186" />
         <entry key="..\:/Users/quoch/AndroidStudioProjects/TruckSharingApp/app/src/main/res/menu/menu.xml" value="0.27447916666666666" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_add_new_delivery_order.xml" value="0.45811767578125007" />
         <entry key="app/src/main/res/layout/activity_add_order.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_home.xml" value="0.14266304347826086" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_my_orders.xml" value="0.14266304347826086" />
-        <entry key="app/src/main/res/layout/activity_order_details.xml" value="0.14266304347826086" />
+        <entry key="app/src/main/res/layout/activity_order_details.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.25" />
       </map>
     </option>
