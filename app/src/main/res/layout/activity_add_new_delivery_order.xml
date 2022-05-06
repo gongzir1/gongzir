@@ -16,61 +16,63 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Good type："
+            android:textAlignment="center"
             android:textSize="20sp"
             android:textStyle="bold"></TextView>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="25dp"
-            android:text="Furniture"
             android:id="@+id/C1"
-            ></TextView>
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:text="Furniture"></TextView>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="25dp"
-            android:text="Dry goods"
             android:id="@+id/C2"
-            ></TextView>
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:text="Dry goods"></TextView>
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/C3"
+            android:layout_width="80dp"
             android:layout_height="25dp"
-            android:text="Food"
-            android:id="@+id/C3"></TextView>
+            android:text="Food"></TextView>
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/C4"
+            android:layout_width="200dp"
             android:layout_height="25dp"
-            android:text="Building material"
-            android:id="@+id/C4"></TextView>
+            android:text="Building material"></TextView>
 
         <EditText
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:hint="Other"
             android:id="@+id/E1"
+            android:layout_width="202dp"
+            android:layout_height="wrap_content"
+            android:hint="Other"
 
-            ></EditText>
+            android:textSize="14sp"></EditText>
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        android:orientation="vertical">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <TextView
-            android:layout_width="261dp"
-            android:layout_height="42dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
             android:text="Weight and dimension："
-            android:textAlignment="textStart"
+            android:textAlignment="center"
             android:textSize="20sp"
             android:textStyle="bold" />
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -90,6 +92,7 @@
                 android:textSize="14sp" />
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -116,38 +119,40 @@
         android:id="@+id/linear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="325dp">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
         <TextView
-            android:layout_width="136dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Vehicle type："
+            android:textAlignment="center"
             android:textSize="20sp"
             android:textStyle="bold"></TextView>
 
         <TextView
             android:id="@+id/C5"
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="25dp"
             android:text="Truck"></TextView>
 
         <TextView
             android:id="@+id/C6"
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="25dp"
             android:text="Van"></TextView>
 
         <TextView
             android:id="@+id/C7"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="25dp"
             android:text="Refrigerated truck"></TextView>
 
         <TextView
             android:id="@+id/C8"
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="25dp"
             android:text="Mini-truck"></TextView>
 
@@ -160,14 +165,17 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/createOrderBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="132dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="32dp"
         android:text="Create order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linear"
-        android:id="@+id/createOrderBtn"></Button>
+        app:layout_constraintVertical_bias="0.0"></Button>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
