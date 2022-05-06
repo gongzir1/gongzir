@@ -95,9 +95,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 //        db.close();
         return newRowID;
     }
-    public List<Order>fetchAllOrder(String username){
+    public List<Order> fetchAllOrder(String username){
         List<Order>orderList=new ArrayList<>();
-        SQLiteDatabase db = this.getReadableDatabase();
+        SQLiteDatabase db = this.getWritableDatabase();
 
         Cursor cursor = db.rawQuery(" SELECT * FROM " + Util.TABLE_NAME2,null);
 
@@ -114,7 +114,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     order.setHeight(cursor.getString(6));
                     order.setLength(cursor.getString(7));
                     order.setWidth(cursor.getString(8));
-                    order.setVehicle(cursor.getString(9));
+                  //  order.setVehicle(cursor.getString(9));
 
                     orderList.add(order);
                 }

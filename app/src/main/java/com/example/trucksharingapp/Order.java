@@ -1,7 +1,5 @@
 package com.example.trucksharingapp;
 
-
-
 public class Order {
     private int id,image,imageShare;
     private String title,detail,date,time,location,goodtype,weight,height,length,width,vehicle,username;
@@ -14,6 +12,12 @@ public class Order {
 
     }
     public Order(){}
+
+    public Order(String title, String detail) {
+        this.title=title;
+        this.detail=detail;
+    }
+
     public int getId(){return this.id;}
     public void  setId(int id){this.id=id;}
     public int getImage(){return  this.image;}

@@ -6,11 +6,8 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
-import android.text.InputType;
 import android.text.TextUtils;
 import android.text.TextWatcher;
-import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,18 +15,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.trucksharingapp.data.DatabaseHelper;
-import com.example.trucksharingapp.model.User;
 
 public class add_new_delivery_order extends AppCompatActivity {
     Button createOrderBtn;
-    TextView gtype1;
-    TextView gtype2;
-    TextView gtype3;
-    TextView gtype4;
-    TextView vtype1;
-    TextView vtype2;
-    TextView vtype3;
-    TextView vtype4;
+    TextView gtype1,gtype2,gtype3,gtype4,vtype1,vtype2,vtype3,vtype4;
     String goodtype="Food",weight,height,length,width,vehicle="mini-truck";
     EditText goodt,vehiclet,weight_et,height_et,length_et,width_et;
 //    boolean otherGood,otherVehicle;
@@ -187,20 +176,31 @@ public class add_new_delivery_order extends AppCompatActivity {
                 if(TextUtils.isEmpty(weight_et.getText().toString())||TextUtils.isEmpty(height_et.getText().toString())||TextUtils.isEmpty(width_et.getText().toString())||TextUtils.isEmpty(length_et.getText().toString())){
                     Toast.makeText(add_new_delivery_order.this, "please fill all details", Toast.LENGTH_SHORT).show();
                 }else {
-                    Order order=new Order();
-                    order.setDate(date);
-                    order.setTime(time);
-                    order.setLocation(location);
-                    order.setGoodtype(goodtype);
-                    order.setWeight(weight);
-                    order.setHeight(height);
-                    order.setLength(length);
-                    order.setWidth(width);
-                    order.setVehicle(vehicle);
-                    order.setUsername(MainActivity.user);
-                    long result=db.insertOrder(order);
+//                    Order order=new Order();
+//                    order.setDate(date);
+//                    order.setTime(time);
+//                    order.setLocation(location);
+//                    order.setGoodtype(goodtype);
+//                    order.setWeight(weight);
+//                    order.setHeight(height);
+//                    order.setLength(length);
+//                    order.setWidth(width);
+//                    order.setVehicle(vehicle);
+//                    order.setUsername(MainActivity.user);
+//                    long result=db.insertOrder(order);
+//                    com.example.trucksharingapp.Order newOrder= new com.example.trucksharingapp.Order(goodtype,width);
+//                    long result=db.insertOrder(newOrder);
+//                    db.close();
+//                    Boolean INSERT_OK;
+//
+//                    if(result!=-1){
+//                        INSERT_OK = true;
+//                    } else INSERT_OK = false;
 
-                    Intent intent=new Intent(getApplicationContext(),My_orders.class);
+                    Intent intent=new Intent(getApplicationContext(),My_orders_new.class);
+                    intent.putExtra("goodtype",goodtype);
+                    intent.putExtra("date",date);
+
                     startActivity(intent);
                 }
 

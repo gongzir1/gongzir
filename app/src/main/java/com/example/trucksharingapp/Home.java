@@ -39,7 +39,8 @@ public class Home extends AppCompatActivity implements OrderAdapter.OnRowClickLi
             Order order=new Order(newImageList[i],newNameList[i],newDetailList[i], R.drawable.changetask);
             orderList.add(order);
         }
-
+        Intent intent = getIntent();
+        String username = intent.getStringExtra("user");
         dropDownMenu=findViewById(R.id.imageButton);
         dropDownMenu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,8 +55,9 @@ public class Home extends AppCompatActivity implements OrderAdapter.OnRowClickLi
                             Toast.makeText(getApplicationContext(), "home",Toast.LENGTH_SHORT).show();
                         }
                         else if (item.getTitle().equals("My orders")){
-                   //         Intent intent= new Intent(getApplicationContext(),My_orders.class);
-                     //       startActivity(intent);
+                            Intent intentorder= new Intent(getApplicationContext(),My_orders_new.class);
+                            intentorder.putExtra("user", username);
+                            startActivity(intentorder);
                             Toast.makeText(getApplicationContext(), "my orders",Toast.LENGTH_SHORT).show();
                         }
                         else if(item.getTitle().equals("Account")){

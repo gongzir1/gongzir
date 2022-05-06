@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this,"Successfully logged in",Toast.LENGTH_SHORT).show();
                     Intent intent1=new Intent(getApplicationContext(),Home.class);
                     user=usernameEditText.getText().toString();
+                    intent1.putExtra("user",user);
                     startActivity(intent1);
                 }
                 else
