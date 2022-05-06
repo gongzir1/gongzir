@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Order_details extends AppCompatActivity {
-    TextView usertv,timetv,goodtypetv,weighttv,heighttv,lengthtv,widthtv;
+    TextView usertv,timetv,goodtypetv,weighttv,heighttv,lengthtv,widthtv,quantitytv;
     ImageView imageView;
     Button callBtn;
     @Override
@@ -21,12 +21,13 @@ public class Order_details extends AppCompatActivity {
         setContentView(R.layout.activity_order_details);
         Intent intent=getIntent();
         String user="From:"+MainActivity.user;
-        String time="Pick up time"+intent.getStringExtra("time");
+        String time="Pick up time:"+intent.getStringExtra("time");
         String weight="Weight:"+intent.getStringExtra("weight");
-        String width="Width"+intent.getStringExtra("width");
-        String length="Length"+intent.getStringExtra("length");
+        String width="Width:"+intent.getStringExtra("width");
+        String length="Length:"+intent.getStringExtra("length");
         String goodtype="Type:"+intent.getStringExtra("goodtype");
         String height="Height:"+intent.getStringExtra("height");
+        String quantity="Quantity:"+intent.getStringExtra("quantity");
 
         imageView=findViewById(R.id.imageView);
         imageView.setImageResource(R.drawable.image);
@@ -34,16 +35,18 @@ public class Order_details extends AppCompatActivity {
         timetv=findViewById(R.id.Textviewc);
         weighttv=findViewById(R.id.Textviewe);
         widthtv=findViewById(R.id.Textviewg);
-        lengthtv=findViewById(R.id.Textviewi);
+//        lengthtv=findViewById(R.id.Textviewi);
         goodtypetv=findViewById(R.id.Textviewf);
         heighttv=findViewById(R.id.Textviewh);
+//        quantitytv.findViewById(R.id.Textviewj);
         usertv.setText(user);
         timetv.setText(time);
         weighttv.setText(weight);
         widthtv.setText(width);
-        lengthtv.setText(length);
+//        lengthtv.setText(length);
         goodtypetv.setText(goodtype);
         heighttv.setText(height);
+//        quantitytv.setText(quantity);
         callBtn=findViewById(R.id.call);
         callBtn.setOnClickListener(new View.OnClickListener() {
             @Override
