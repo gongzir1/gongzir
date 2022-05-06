@@ -92,4 +92,5 @@ public class Order {
     public void setVehicle(String vehicle) {
         this.vehicle = vehicle;
     }
+
 }

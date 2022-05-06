@@ -102,7 +102,8 @@ public class My_orders extends AppCompatActivity implements OrderAdapter.OnRowCl
         intent.putExtra("weight",orderList.get(id).getWeight());
         intent.putExtra("height",orderList.get(id).getHeight());
         intent.putExtra("width",orderList.get(id).getWidth());
-        intent.putExtra("length",orderList.get(id).getLength());
+//        intent.putExtra("length",orderList.get(id).getLength());
+//        intent.putExtra("quanlity",orderList.get(id).get)
         startActivity(intent);
     }
 }

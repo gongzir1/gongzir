@@ -51,14 +51,18 @@ public class Home extends AppCompatActivity implements OrderAdapter.OnRowClickLi
                 popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     public boolean onMenuItemClick(MenuItem item) {
                         if (item.getTitle().equals("Home")){
-//
-                            Toast.makeText(getApplicationContext(), "1",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "home",Toast.LENGTH_SHORT).show();
                         }
                         else if (item.getTitle().equals("My orders")){
-                            Intent intent= new Intent(getApplicationContext(),My_orders.class);
-                            startActivity(intent);
+                   //         Intent intent= new Intent(getApplicationContext(),My_orders.class);
+                     //       startActivity(intent);
+                            Toast.makeText(getApplicationContext(), "my orders",Toast.LENGTH_SHORT).show();
                         }
-
+                        else if(item.getTitle().equals("Account")){
+                           // Toast.makeText(getApplicationContext(), "account",Toast.LENGTH_SHORT).show();
+                        Intent intentaccount=new Intent(getApplicationContext(),MainActivity.class);
+                        startActivity(intentaccount);
+                        }
                         return true;
                     }
                 });
