@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/jaron/AndroidStudioProjects/SIT305_7_1P/app/src/main/res/layout/activity_create_alerts.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/jaron/AndroidStudioProjects/SIT305_7_1P/app/src/main/res/layout/activity_main.xml" value="0.21965579710144928" />
+        <entry key="..\:/Users/jaron/AndroidStudioProjects/SIT305_7_1P/app/src/main/res/layout/activity_show_alerts.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/jaron/AndroidStudioProjects/SIT305_7_1P/app/src/main/res/layout/alerts.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/jaron/AndroidStudioProjects/SIT305_7_1P/app/src/main/res/layout/fragment_alert.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/jaron/AndroidStudioProjects/SIT305_7_1P/app/src/main/res/layout/fragment_show_alert.xml" value="0.27447916666666666" />
+        <entry key="app/src/main/res/layout/activity_create_alerts.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_show_alerts.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/alerts.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_alert.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/fragment_show_alert.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
