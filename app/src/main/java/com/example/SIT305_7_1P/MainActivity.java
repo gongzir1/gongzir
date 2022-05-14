@@ -10,7 +10,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     //the variables for the buttons
-    Button btnShowAlerts, btnCreateAlerts;
+    Button btnShowAlerts, btnCreateAlerts,btnShowMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,10 +20,12 @@ public class MainActivity extends AppCompatActivity {
         //linking the button variables to the ui elements
         btnCreateAlerts = findViewById(R.id.BtnCreateAlerts);
         btnShowAlerts = findViewById(R.id.BtnShowAlerts);
+        btnShowMap=findViewById(R.id.showMap);
 
         //These intents are for the swapping to the other activities
         Intent ShowAlerts = new Intent(this, ShowAlerts.class);
         Intent CreateAlerts= new Intent(this, CreateAlerts.class);
+        Intent ShowMap=new Intent(this,MapsActivity.class);
 
         //these buttons swap to the other activities
         btnCreateAlerts.setOnClickListener(new View.OnClickListener() {
@@ -37,6 +39,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(ShowAlerts);
+            }
+        });
+        btnShowMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {startActivity(ShowMap);
             }
         });
     }

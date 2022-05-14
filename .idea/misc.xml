@@ -9,12 +9,14 @@
         <entry key="..\:/Users/jaron/AndroidStudioProjects/SIT305_7_1P/app/src/main/res/layout/alerts.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/jaron/AndroidStudioProjects/SIT305_7_1P/app/src/main/res/layout/fragment_alert.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/jaron/AndroidStudioProjects/SIT305_7_1P/app/src/main/res/layout/fragment_show_alert.xml" value="0.27447916666666666" />
-        <entry key="app/src/main/res/layout/activity_create_alerts.xml" value="0.165" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_create_alerts.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.4878890991210938" />
+        <entry key="app/src/main/res/layout/activity_maps.xml" value="0.23802083333333332" />
         <entry key="app/src/main/res/layout/activity_show_alerts.xml" value="0.1" />
         <entry key="app/src/main/res/layout/alerts.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_alert.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_show_alert.xml" value="0.1" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.137" />
       </map>
     </option>
   </component>
