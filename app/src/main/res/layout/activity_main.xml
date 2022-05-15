@@ -24,7 +24,7 @@
             android:text="@string/add_button" />
 
         <Button
-            android:id="@+id/showButton3"
+            android:id="@+id/showAllButton"
             android:layout_width="351dp"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"

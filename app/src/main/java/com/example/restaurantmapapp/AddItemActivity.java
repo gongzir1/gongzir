@@ -157,6 +157,8 @@ public class AddItemActivity extends AppCompatActivity {
                 name = nameEditText.getText().toString();
                 if (checkPlace(name, chosenLocation)) {
                     long result = mapDb.insertLocation(name, chosenLocation.latitude, chosenLocation.longitude);
+                    Intent intent = new Intent(AddItemActivity.this,MainActivity.class);
+                    startActivity(intent);
                 }
             }
         });

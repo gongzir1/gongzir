@@ -6,6 +6,10 @@
         <entry key="app/src/main/res/layout/activity_add_item.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.23802083333333332" />
         <entry key="app/src/main/res/layout/activity_maps.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_show_all_item.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/alerts.xml" value="0.15081521739130435" />
+        <entry key="app/src/main/res/layout/fragment_alert.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_show_alert.xml" value="0.234375" />
       </map>
     </option>
   </component>

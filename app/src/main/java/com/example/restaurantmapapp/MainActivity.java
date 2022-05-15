@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button addPlaceButton, showAllButton;
+    Button addPlaceButton, showAllButton,showMapButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,8 +17,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         addPlaceButton = findViewById(R.id.addButton);
-        showAllButton = findViewById(R.id.showButton);
-
+        showMapButton = findViewById(R.id.showButton);
+        showAllButton=findViewById(R.id.showAllButton);
         // Opens add restaurant activity on click.
         addPlaceButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,10 +29,18 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Opens map and shows all locations saved in the database.
-        showAllButton.setOnClickListener(new View.OnClickListener() {
+        showMapButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, MapsActivity.class);
+                intent.putExtra("SOURCE", "all");
+                startActivity(intent);
+            }
+        });
+        showAllButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ShowAllItemActivity.class);
                 intent.putExtra("SOURCE", "all");
                 startActivity(intent);
             }
