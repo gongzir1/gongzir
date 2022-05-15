@@ -36,7 +36,7 @@ public class My_orders extends AppCompatActivity implements OrderAdapter.OnRowCl
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_orders);
-        db=new DatabaseHelper(this);
+        db=new DatabaseHelper(My_orders.this);
 
         orderList=db.fetchAllOrder(MainActivity.user);
         Log.d("?????", "onClick: ");

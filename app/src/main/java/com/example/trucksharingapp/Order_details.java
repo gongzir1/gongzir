@@ -10,11 +10,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Order_details extends AppCompatActivity {
     TextView usertv,timetv,goodtypetv,weighttv,heighttv,lengthtv,widthtv,quantitytv;
     ImageView imageView;
-    Button callBtn;
+    Button detailBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,10 +48,13 @@ public class Order_details extends AppCompatActivity {
         goodtypetv.setText(goodtype);
         heighttv.setText(height);
 //        quantitytv.setText(quantity);
-        callBtn=findViewById(R.id.call);
-        callBtn.setOnClickListener(new View.OnClickListener() {
+        detailBtn=findViewById(R.id.call);
+        detailBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intentorder= new Intent(getApplicationContext(),MapsActivity.class);
+                startActivity(intentorder);
+                Toast.makeText(getApplicationContext(), "my orders",Toast.LENGTH_SHORT).show();
             }
         });
 

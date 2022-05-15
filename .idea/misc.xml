@@ -21,12 +21,15 @@
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_add_new_delivery_order.xml" value="0.4534412955465587" />
         <entry key="app/src/main/res/layout/activity_add_order.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_checkout.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_maps.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_my_orders.xml" value="0.14266304347826086" />
         <entry key="app/src/main/res/layout/activity_my_orders_new.xml" value="0.22447916666666667" />
         <entry key="app/src/main/res/layout/activity_order_details.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_maps.xml" value="0.23731884057971014" />
       </map>
     </option>
   </component>
