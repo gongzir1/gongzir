@@ -1,2 +1,2 @@
-rootProject.name = "Restaurant Map App"
+rootProject.name = "LostAndFoundWithMap"
 include ':app'
