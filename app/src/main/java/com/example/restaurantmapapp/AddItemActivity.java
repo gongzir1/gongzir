@@ -28,14 +28,14 @@ import com.google.android.libraries.places.widget.listener.PlaceSelectionListene
 
 import java.util.Arrays;
 
-public class AddRestaurantActivity extends AppCompatActivity {
+public class AddItemActivity extends AppCompatActivity {
     private static final String TAG = "Running ";
     DatabaseHelper mapDb;
     LocationManager locationManager;
     LocationListener locationListener;
     Button currentLocationButton, showMapButton, saveButton;
-    EditText placeNameEditText;
-    String placeName;
+    EditText placeLocationEditText,nameEditText,phoneEditText,typeEditText,desEditText,dateEditText;
+    String name;
     Double lng, lat;
     LatLng chosenLocation;
 
@@ -90,11 +90,11 @@ public class AddRestaurantActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_restaurant);
+        setContentView(R.layout.activity_add_item);
         currentLocationButton = findViewById(R.id.currentLocationButton);
         locationManager = (LocationManager) this.getSystemService(LOCATION_SERVICE);
-        showMapButton = findViewById(R.id.showButton2);
-        placeNameEditText = findViewById(R.id.placeNameEditText);
+      //  showMapButton = findViewById(R.id.showButton2);
+        placeLocationEditText = findViewById(R.id.TextboxLocation);
         saveButton = findViewById(R.id.saveButton);
         mapDb = new DatabaseHelper(this);
 
@@ -137,26 +137,26 @@ public class AddRestaurantActivity extends AppCompatActivity {
         });
 
         // Checks information provided, passes LatLng and place name of location to be viewed on map.
-        showMapButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                placeName = placeNameEditText.getText().toString();
-                if (checkPlace(placeName, chosenLocation)) {
-                    Intent intent = new Intent(AddRestaurantActivity.this, MapsActivity.class);
-                    intent.putExtra("SOURCE", "single");
-                    intent.putExtra("COORDS", chosenLocation);
-                    intent.putExtra("NAME", placeName);
-                    startActivity(intent);
-                }
-            }
-        });
+//        showMapButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                name = nameEditText.getText().toString();
+//                if (checkPlace(name, chosenLocation)) {
+//                    Intent intent = new Intent(AddItemActivity.this, MapsActivity.class);
+//                    intent.putExtra("SOURCE", "single");
+//                    intent.putExtra("COORDS", chosenLocation);
+//                    intent.putExtra("NAME", name);
+//                    startActivity(intent);
+//                }
+//            }
+//        });
         // Checks entry validity, if succeeds, adds data to database and toasts the row ID.
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                placeName = placeNameEditText.getText().toString();
-                if (checkPlace(placeName, chosenLocation)) {
-                    long result = mapDb.insertLocation(placeName, chosenLocation.latitude, chosenLocation.longitude);
+                name = nameEditText.getText().toString();
+                if (checkPlace(name, chosenLocation)) {
+                    long result = mapDb.insertLocation(name, chosenLocation.latitude, chosenLocation.longitude);
                 }
             }
         });

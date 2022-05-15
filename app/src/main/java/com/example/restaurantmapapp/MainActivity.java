@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         addPlaceButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, AddRestaurantActivity.class);
+                Intent intent = new Intent(MainActivity.this, AddItemActivity.class);
                 startActivity(intent);
             }
         });
