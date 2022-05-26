@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".add_new_delivery_order">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Good type："
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:id="@+id/C1"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:text="Furniture"></TextView>
+
+        <TextView
+            android:id="@+id/C2"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:text="Dry goods"></TextView>
+
+        <TextView
+            android:id="@+id/C3"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:text="Food"></TextView>
+
+        <TextView
+            android:id="@+id/C4"
+            android:layout_width="200dp"
+            android:layout_height="25dp"
+            android:text="Building material"></TextView>
+
+        <EditText
+            android:id="@+id/E1"
+            android:layout_width="202dp"
+            android:layout_height="wrap_content"
+            android:hint="Other"
+
+            android:textSize="14sp"></EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Weight and dimension："
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/AddWeight"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:hint="Weight"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/AddWidth"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:hint="Width"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/AddLength"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:hint="Length"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/AddHeight"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:hint="Height"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vehicle type："
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:id="@+id/C5"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:text="Truck"></TextView>
+
+        <TextView
+            android:id="@+id/C6"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:text="Van"></TextView>
+
+        <TextView
+            android:id="@+id/C7"
+            android:layout_width="200dp"
+            android:layout_height="25dp"
+            android:text="Refrigerated truck"></TextView>
+
+        <TextView
+            android:id="@+id/C8"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:text="Mini-truck"></TextView>
+
+        <EditText
+            android:id="@+id/E2"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:focusableInTouchMode="false"
+            android:hint="Other"></EditText>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/createOrderBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Create order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear"
+        app:layout_constraintVertical_bias="0.0"></Button>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

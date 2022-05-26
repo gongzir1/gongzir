@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <fragment
+        android:id="@+id/map1"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="485dp"
+        android:layout_marginTop="50dp"
+        tools:context=".MapsActivity" />
+
+
+
+    <TextView
+        android:id="@+id/pickup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="Pick up at:" />
+
+    <TextView
+        android:id="@+id/dropOff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:gravity="center"
+        android:text="Drop off at:"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/fare"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="535dp"
+        android:gravity="center"
+        android:text="approxi fare is:" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="560dp"
+        android:gravity="center"
+        android:text="approxi time is " />
+
+    <Button
+        android:id="@+id/book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="600dp"
+        android:gravity="center"
+        android:layout_marginStart="150dp"
+        android:text="book now" />
+
+    <Button
+        android:id="@+id/calldriver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="call driver"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="650dp"
+        android:gravity="center"/>
+
+
+
+</FrameLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:orientation="vertical"
+    tools:context=".Add_order">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textSize="20sp"></TextView>
+        <EditText
+            android:id="@+id/et_title"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:ems="10"
+            android:textColor="@color/purple_200"
+            android:textColorHint="@color/black"
+            android:padding="5dp"
+            android:textSize="20sp"
+
+            android:hint="Title"
+            android:inputType="textPersonName"/>
+    </LinearLayout>
+
+
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:textSize="20sp"></TextView>
+
+    <CalendarView
+        android:id="@+id/simpleCalendarView"
+        android:layout_width="fill_parent"
+        android:layout_height="311dp"
+        android:firstDayOfWeek="2"
+        android:selectedWeekBackgroundColor="#f00" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:textSize="20sp"></TextView>
+        <EditText
+            android:id="@+id/et_time"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:ems="10"
+            android:textColor="@color/purple_200"
+            android:textColorHint="@color/black"
+            android:padding="5dp"
+            android:textSize="20sp"
+            android:inputType="date"
+            android:hint="Time"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:textSize="20sp"></TextView>
+        <EditText
+            android:id="@+id/et_location"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:ems="10"
+            android:textColor="@color/purple_200"
+            android:textColorHint="@color/black"
+            android:padding="5dp"
+            android:textSize="20sp"
+            android:inputType="text"
+            android:hint="Location"
+            android:onClick="onClickAutocomplete"/>
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+
+        android:layout_gravity="center"
+        android:text="NEXT"
+        android:textAllCaps="true"
+
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:onClick="OnClickSave"></Button>
+</LinearLayout>
